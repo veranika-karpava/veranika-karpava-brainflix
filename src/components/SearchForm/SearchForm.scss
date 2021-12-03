@@ -1,0 +1,31 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.search {
+    @include flex(flex-start, center, row, nowrap);
+    position:relative;
+    margin-bottom: 1rem;
+
+    &__icon-search {
+        position:absolute;
+        left: 0.5rem;
+    }
+
+    &__input {
+        outline: none;
+        height: 2.25rem;
+        width: 85%;
+        padding:0.75rem 0.75rem 0.75rem 2rem;
+        margin-right: 1rem;
+        @include styleInputMobile;
+
+        &::placeholder {
+            @include font-placeholder-text;
+        }
+
+        &[type = "search"] {
+        @include font-placeholder-text;
+        }
+    }
+}

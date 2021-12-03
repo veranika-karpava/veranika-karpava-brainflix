@@ -1,0 +1,16 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+
+.header {
+    &__logo {
+        width:100%;
+        margin-bottom: 1rem;
+        text-align: center;
+        }
+    &__image-logo {
+        width: 7.5rem;
+        height: 1.5625rem;
+        }
+}
