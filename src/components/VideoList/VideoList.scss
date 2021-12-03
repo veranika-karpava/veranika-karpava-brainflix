@@ -1,0 +1,11 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+
+.related-videos__list {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    @include flex(space-between, flex-start, column, nowrap);
+}

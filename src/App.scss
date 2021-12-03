@@ -10,3 +10,13 @@
 body {
     font-family: 'AvenirNextLTPro', 'Calibri', sans-serif;
 }
+
+.related-videos {
+    width:100%;
+    padding: 1.5rem 1rem;
+
+    &__title {
+        margin-bottom: 1.5rem;
+        @include font-stack-subheader-mobile;
+    }
+}
