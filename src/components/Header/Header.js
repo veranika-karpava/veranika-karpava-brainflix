@@ -7,15 +7,12 @@ import upload from '../../assets/images/upload.svg';
 
 
 const Header = () => {
-
     const clickHandler = (e) => {
         e.preventDefault();
-        console.log('click')
     };
+
     const submitHandler = (e) => {
         e.preventDefault();
-        console.log('click search');
-        // e.target.reset();
     };
 
     return (

@@ -3,12 +3,16 @@
 @use "../../styles/partials/variables" as *;
 
 .button{
+    
     &__component{
         @include flex(flex-start, center, row, nowrap);
         @include buttonStyle;
         @include font-stack-button-labels;
         width:100%;
         padding:0.75rem;
+        @include tablet {
+            @include buttonStyleTablet;
+        }
     }
 
     &__label {

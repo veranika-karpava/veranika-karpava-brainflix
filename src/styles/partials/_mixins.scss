@@ -23,10 +23,24 @@
     @mixin styleInputMobile{
         border-radius: 4px;
         border: 1px solid $mercury;
+        min-height: 2.25rem;
+    }
+    @mixin styleInputTablet{
+        border-radius: 4px;
+        border: 1px solid $mercury;
+        min-height: 2.5rem;
     }
 
     @mixin buttonStyle {
         height: 2.5rem;
+        background-color: $brainflix-blue;
+        border: none;
+        border-radius: 4px;
+    }
+
+    @mixin buttonStyleTablet {
+        height: 2.5rem;
+        min-width:9.375rem;
         background-color: $brainflix-blue;
         border: none;
         border-radius: 4px;

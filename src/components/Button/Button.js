@@ -1,11 +1,13 @@
 import './Button.scss';
 
 const Button = (props) => {
+    const { clickHandler, icon, title } = props;
+
     return (
-        <form className='button' onClick={props.clickHandler}>
+        <form className='button' onClick={clickHandler}>
             <button className="button__component">
-                <img className="button__icon" src={props.icon} alt={props.title} />
-                <p className="button__label">{props.title}</p>
+                <img className="button__icon" src={icon} alt={title} />
+                <p className="button__label">{title}</p>
             </button>
         </form>
     );

@@ -6,7 +6,6 @@ const VideoList = (props) => {
     return (
         <ul className="related-videos__list">
             {props.shortVideos.map((video, i) => {
-                console.log(video.id)
                 return (
                     <VideoItem
                         key={i}

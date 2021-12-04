@@ -45,13 +45,17 @@
     @include font-stack (0.8125rem, 700, 1.125rem, $brainflix-black);
 }
 
+@mixin font-stack-section-header-tablet {
+    @include font-stack (0.875rem, 700, 1.375rem, $brainflix-black);
+}
+
 // Subheader 
 @mixin font-stack-subheader-mobile {
     @include font-stack (0.8125rem, 700, 1.125rem, $silver);
 }
 
 @mixin font-stack-subheader-tablet-desktop{
-    @include font-stack (0.875rem, 700, 1.375rem, $brainflix-black);
+    @include font-stack (0.875rem, 700, 1.375rem, $silver);
 }
 
 // Body

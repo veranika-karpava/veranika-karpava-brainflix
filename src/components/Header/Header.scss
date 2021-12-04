@@ -5,11 +5,22 @@
 .header {
     padding: 1rem;
     @include flex(flex-start, flex-start, column, nowrap);
+    @include tablet {
+        @include flex(space-between, center, row, nowrap);
+        padding: 1rem 2.25rem;   
+    }
+    @include desktop {
+        padding: 1rem 5rem;  
+    }
     
     &__container-forms{ 
         width: 100%;
         @include flex(space-between, stretch, column, nowrap);
         position: relative;
+        @include tablet {
+            width: 70%;
+            @include flex(flex-start, center, row, nowrap);
+        }
     }
 }
 
@@ -17,4 +28,7 @@
     position:absolute;
     right: 0%;
     top: 1.5%;
+    @include tablet {
+        position:static;
+    }
 }

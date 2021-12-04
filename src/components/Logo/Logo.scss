@@ -8,6 +8,11 @@
         width:100%;
         margin-bottom: 1rem;
         text-align: center;
+        @include tablet {
+            width:30%; 
+            margin-bottom: 0rem;
+            text-align: left;
+        }
         }
     &__image-logo {
         width: 7.5rem;
