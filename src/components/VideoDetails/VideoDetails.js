@@ -29,7 +29,7 @@ const VideoDetails = (props) => {
             </div>
             <div className='video-content__description'>
                 <p className='video-content__text'>{description}</p>
-                <p className='video-content__comments-counter'>{comments.length} </p>
+                <p className='video-content__comments-counter'>{comments.length} Comments</p>
             </div>
         </div>
     );

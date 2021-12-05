@@ -4,8 +4,9 @@
 
 .search {
     @include flex(flex-start, center, row, nowrap);
+    width: 95%;
     margin-bottom: 1rem;
-    margin-right: 1rem;
+    position: relative;
     @include tablet {
         margin-bottom: 0rem;
         width: 50%;
@@ -15,12 +16,12 @@
     }
 
     &__button {
+        position: absolute;
+        left: 8px;
         background: transparent;
         padding: 0rem;
         border: none;
         outline: none;
-        margin-right: -28px;
-        z-index: 1;
     }
 
     &__icon-search {
@@ -31,8 +32,9 @@
 
     &__input {
         outline: none;
-        width: 85%;
+        width: 90%;
         padding:0.625rem 0.75rem 0.625rem 2rem;
+        object-fit: cover;
         @include styleInputMobile;
         @include tablet {
             @include styleInputTablet;

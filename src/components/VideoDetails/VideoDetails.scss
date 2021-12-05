@@ -1,0 +1,73 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+
+.video-content {
+    @include flex(space-between, flex-start, column, nowrap);
+    padding: 1rem 1rem 0;
+
+    &__title {
+        @include font-stack-page-header-mobile;
+        margin-top: 0.5rem;
+        padding-bottom: 1rem;
+        @include dividerStyle;
+    }
+
+    &__details {
+        @include flex(space-between, flex-start, row, nowrap);
+        width: 100%; 
+        margin-top: 1rem;
+        padding-bottom: 1rem;
+        @include dividerStyle;
+    }
+
+    &__publication {
+        @include flex(flex-start, flex-start, column, nowrap);
+    }
+
+    &__channel {
+        @include font-stack-section-header;
+        padding-bottom: 1rem;
+    }
+
+    &__date-publication {
+       @include font-stack-body-mobile;
+       color: $silver;
+    }
+
+    &__popularity{
+        @include flex(flex-start, flex-start, column, nowrap);
+    }
+
+    &__views-content {
+        @include font-stack-body-mobile;
+        color: $silver;
+        padding-bottom: 1rem;
+    }
+
+    &__image-views,
+    &__image-likes {
+        margin-right: 0.5rem;
+        vertical-align: middle;
+    }
+
+    &__likes-content{
+        @include font-stack-body-mobile;
+        color: $silver;
+    }
+
+    &__description {
+        @include flex(flex-start, flex-start, column, nowrap);
+        margin-top: 1rem;
+        @include font-stack-body-mobile;
+    }
+
+    &__comments-counter{
+        margin-top: 1rem;
+        @include font-stack-section-header;
+    }
+
+
+
+}
