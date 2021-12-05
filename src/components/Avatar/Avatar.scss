@@ -2,7 +2,7 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 
-
+//  for header's avatar
 .avatar {
     @include tablet {
         margin-left: 1.5rem;
@@ -19,6 +19,8 @@
         }
     }
 }
+
+//  for comment's avatar
 
 .comment-avatar {
     text-align: end;

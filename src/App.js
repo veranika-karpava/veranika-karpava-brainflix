@@ -7,14 +7,11 @@ import VideoList from './components/VideoList/VideoList';
 import videoData from './data/videos.json';
 import videoDataDetail from './data/video-details.json';
 
-
-
 class App extends Component {
   state = {
     shortVideos: videoData,
     selectedVideo: videoDataDetail[0]
   }
-
 
   render() {
     // console.log(this.state.shortVideos)

@@ -1,7 +1,6 @@
 import './Avatar.scss';
 import mohan_muruge from '../../assets/images/mohan_muruge.jpg';
 
-
 function Avatar(props) {
     return (
         <div className={props.className}>

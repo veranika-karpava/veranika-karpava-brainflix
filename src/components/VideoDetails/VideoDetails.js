@@ -1,13 +1,12 @@
 import './VideoDetails.scss';
 import CommentBox from '../CommentBox/CommentBox';
+import ExistCommentBox from '../ExistCommentBox/ExistCommentBox';
 import viewsIcon from '../../assets/images/views.svg';
 import likesIcon from '../../assets/images/likes.svg';
 
 const VideoDetails = (props) => {
     const { title, channel, timestamp, views, likes, description, comments } = props.selectedVideo;
     const timestampDate = new Date(timestamp).toLocaleDateString("en-US", { timeZone: "UTC", year: "numeric", month: "2-digit", day: "2-digit" });
-
-    console.log(timestampDate);
 
     return (
         <div className='video-content'>
@@ -33,6 +32,7 @@ const VideoDetails = (props) => {
                 <p className='video-content__comments-counter'>{comments.length} Comments</p>
             </div>
             <CommentBox />
+            <ExistCommentBox comments={comments} />
         </div>
     );
 };
