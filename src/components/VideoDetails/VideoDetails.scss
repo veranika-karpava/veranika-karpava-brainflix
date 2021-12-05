@@ -5,13 +5,27 @@
 
 .video-content {
     @include flex(space-between, flex-start, column, nowrap);
-    padding: 1rem 1rem 0;
+    padding: 1.5rem 1rem 0rem;
+    @include tablet {
+        padding: 2.25rem 2.25rem 0;
+    }
+    @include desktop {
+        padding-left: 8rem;
+        padding-right: 0rem;
+        width: 70%;
+    }
+
 
     &__title {
+        width: 100%;
         @include font-stack-page-header-mobile;
-        margin-top: 0.5rem;
         padding-bottom: 1rem;
         @include dividerStyle;
+        @include tablet {
+            padding-bottom: 0rem;
+            @include font-stack-page-header-tablet-desktop;
+            border: none;
+        }
     }
 
     &__details {
@@ -20,30 +34,63 @@
         margin-top: 1rem;
         padding-bottom: 1rem;
         @include dividerStyle;
+        @include tablet {
+            @include flex(space-between, flex-start, row, nowrap); 
+            padding-bottom: 0.5rem;
+        }
+        @include desktop {
+            padding-right: 1.5rem;
+        }
     }
 
     &__publication {
+        width: 40%;
         @include flex(flex-start, flex-start, column, nowrap);
+        @include tablet {
+            width: 50%;
+            @include flex(flex-start, flex-start, row, nowrap); 
+        }
+        @include desktop {
+            padding-right: 1.5rem;
+        }
     }
 
     &__channel {
         @include font-stack-section-header;
         padding-bottom: 1rem;
+        @include tablet {
+            @include font-stack-section-header-tablet;
+            padding-bottom: 0rem; 
+            margin-right: 1.5rem;
+        }
+
     }
 
     &__date-publication {
        @include font-stack-body-mobile;
        color: $silver;
+       @include font-stack-body-tablet-desktop;
+       color: $silver;
     }
 
     &__popularity{
+        width: 50%;
         @include flex(flex-start, flex-start, column, nowrap);
+        @include tablet {
+            @include flex(flex-end, flex-start, row, nowrap); 
+        }
     }
 
     &__views-content {
         @include font-stack-body-mobile;
         color: $silver;
         padding-bottom: 1rem;
+        @include tablet {
+            @include font-stack-body-tablet-desktop;
+            color: $silver;
+            padding-bottom: 0rem; 
+            margin-right: 1.5rem;
+        }
     }
 
     &__image-views,
@@ -55,19 +102,32 @@
     &__likes-content{
         @include font-stack-body-mobile;
         color: $silver;
+        @include tablet {
+            @include font-stack-body-tablet-desktop;
+            color: $silver;
+        }
     }
 
     &__description {
         @include flex(flex-start, flex-start, column, nowrap);
         margin-top: 1rem;
         @include font-stack-body-mobile;
+        @include tablet {
+            margin-top: 2.25rem; 
+            @include font-stack-body-tablet-desktop;
+        }
+        @include desktop {
+            padding-right: 1.5rem;
+        }
     }
 
     &__comments-counter{
+        width: 100%;
         margin-top: 1rem;
         @include font-stack-section-header;
+        @include tablet {
+            margin-top: 2.25rem; 
+            @include font-stack-section-header-tablet;
+        }
     }
-
-
-
 }

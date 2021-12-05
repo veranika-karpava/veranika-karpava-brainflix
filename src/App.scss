@@ -11,6 +11,16 @@ body {
     font-family: 'AvenirNextLTPro', 'Calibri', sans-serif;
 }
 
+.video-section {
+    @include flex(space-between, flex-start, column, nowrap);
+
+    &__content-main {
+        @include desktop{
+            @include flex(space-between, flex-start, row, nowrap);
+        }
+    }
+}
+
 .related-videos {
     width:100%;
     padding: 1.5rem 1rem;
@@ -19,7 +29,9 @@ body {
         width:50%;
     }
     @include desktop {
-        padding: 1rem 5rem; 
+        padding: 1.5rem 8rem 1.5rem 1.5rem;
+        width:40%;
+        @include dividerStyleLeft;
     }
 
     &__title {

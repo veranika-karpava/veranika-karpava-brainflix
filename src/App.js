@@ -23,12 +23,16 @@ class App extends Component {
       <>
         <Header />
         <main>
-          <VideoMainSection selectedVideo={this.state.selectedVideo} />
-          <VideoDetails selectedVideo={this.state.selectedVideo} />
-          <aside className='related-videos'>
-            <h2 className='related-videos__title'>NEXT VIDEOS</h2>
-            <VideoList shortVideos={this.state.shortVideos} />
-          </aside>
+          <section className="video-section">
+            <VideoMainSection selectedVideo={this.state.selectedVideo} />
+            <div className='video-section__content-main'>
+              <VideoDetails selectedVideo={this.state.selectedVideo} />
+              <aside className='related-videos'>
+                <h2 className='related-videos__title'>NEXT VIDEOS</h2>
+                <VideoList shortVideos={this.state.shortVideos} />
+              </aside>
+            </div>
+          </section>
         </main>
       </>
     )
