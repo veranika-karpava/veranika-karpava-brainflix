@@ -13,13 +13,15 @@ class App extends Component {
     selectedVideo: videoDataDetail[0]
   }
 
+
   render() {
-    console.log(this.state.shortVideos)
+    // console.log(this.state.shortVideos)
+    console.log(this.state.selectedVideo)
     return (
       <>
         <Header />
         <main>
-          <VideoMainSection />
+          <VideoMainSection selectedVideo={this.state.selectedVideo} />
           <aside className='related-videos'>
             <h2 className='related-videos__title'>NEXT VIDEOS</h2>
             <VideoList shortVideos={this.state.shortVideos} />

@@ -18,8 +18,8 @@
         @include flex(space-between, stretch, column, nowrap);
         position: relative;
         @include tablet {
-            width: 70%;
-            @include flex(flex-start, center, row, nowrap);
+            width: 55%;
+            @include flex(flex-end, center, row, nowrap);
         }
     }
 }

@@ -4,10 +4,8 @@
 
 
 .avatar {
-    width: 20%;
     @include tablet {
         margin-left: 1.5rem;
-        width: 10%;
         }
 
     &__image {

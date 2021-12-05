@@ -1,0 +1,34 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.video-container {
+    background-color: $brainflix-darkblack;
+    overflow: hidden;
+    width: 100%;
+    @include tablet {
+        padding-top: 56.25%; 
+        height: 0;
+        position: relative;
+      }
+
+    &__video {
+        width: 100%;
+        object-fit: cover;
+        @include tablet {
+            padding: 0 2.25rem;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;  
+        }
+        @include desktop {
+            padding: 0 8.6rem;
+        }
+
+        &::-webkit-media-controls-panel {
+           padding: 0 1rem; 
+        }
+    }
+}
