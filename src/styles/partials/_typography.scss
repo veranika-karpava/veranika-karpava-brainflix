@@ -14,12 +14,26 @@
 
 @font-face {
     font-family:'AvenirNextLTPro';
+    src: url('../../assets/fonts/AvenirNextLTPro-Demi.woff2') format("woff2"),
+    url('../../assets/fonts/AvenirNextLTPro-Demi.woff') format("woff"),
+    url('../../assets/fonts/AvenirNextLTPro-Demi.otf') format("opentype"),
+    url('../../assets/fonts/AvenirNextLTProDemi.ttf') format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:'AvenirNextLTPro';
     src: url('../../assets/fonts/AvenirNextLTPro-Bold.woff2') format("woff2"),
     url('../../assets/fonts/AvenirNextLTPro-Bold.woff') format("woff"),
     url('../../assets/fonts/AvenirNextLTPro-Bold.otf') format("opentype"),
     url('../../assets/fonts/AvenirNextLTProBold.ttf') format("truetype");
     font-weight: 700;
     font-style: normal;
+
+
+
+
 }
 
 @mixin font-stack ($font-size, $font-weight, $line-height, $color){
@@ -51,7 +65,7 @@
 
 // Subheader 
 @mixin font-stack-subheader-mobile {
-    @include font-stack (0.8125rem, 700, 1.125rem, $silver);
+    @include font-stack (0.8125rem, 600, 1.125rem, $silver);
 }
 
 @mixin font-stack-subheader-tablet-desktop{
@@ -69,7 +83,7 @@
 
 // Labels&Buttons
 @mixin font-stack-button-labels {
-    @include font-stack (0.75rem, 700, 1.25rem, $white);
+    @include font-stack (0.75rem, 600, 1.25rem, $white);
 }
 
 @mixin font-placeholder-text {

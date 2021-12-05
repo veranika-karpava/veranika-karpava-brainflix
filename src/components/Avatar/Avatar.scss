@@ -19,3 +19,25 @@
         }
     }
 }
+
+.comment-avatar {
+    text-align: end;
+    width: 20%;
+    @include tablet {
+        width: 5%;
+        }
+
+    &__image {
+    margin-right: 1rem;  
+    margin-top:1.5rem;
+    border-radius: 50% 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+    object-fit: cover;
+    object-position: 10%;
+    @include tablet {
+        vertical-align: middle;
+        margin-top:0rem;
+        }
+    }
+}

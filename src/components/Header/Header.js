@@ -21,7 +21,7 @@ const Header = () => {
             <div className='header__container-forms'>
                 <SearchForm submitHandler={submitHandler} />
                 <Button icon={upload} title='UPLOAD' clickHandler={clickHandler} />
-                <Avatar />
+                <Avatar className='avatar' />
             </div>
         </header>
     );

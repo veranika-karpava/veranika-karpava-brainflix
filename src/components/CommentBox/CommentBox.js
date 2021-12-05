@@ -11,7 +11,7 @@ const CommentBox = () => {
 
     return (
         <div className='comment-container'>
-            <Avatar />
+            <Avatar className='comment-avatar' />
             <form className='comment-container__form'>
                 <label for="comment" className="comment-container__label">JOIN THE CONVERSATION</label>
                 <textarea className="comment-container__box" type="text" id="comment" name="comment"

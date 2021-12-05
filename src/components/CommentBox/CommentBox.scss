@@ -1,0 +1,75 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.comment-container {
+    padding-top: 1.5rem;
+    @include flex(flex-start, flex-start, row, nowrap);
+    width: 100%;
+    @include dividerStyle;
+    @include tablet {
+        padding-bottom: 1.5rem;
+    @include desktop {
+        padding-right: 1.5rem;
+    }
+    }
+
+    &__form {
+        @include flex(flex-start, flex-start, column, nowrap);
+        width: 90%;
+        padding-bottom: 1rem;
+        @include tablet {
+             @include flex(space-between, center, row, nowrap);
+             padding-bottom: 0rem;
+             width: 95%;
+             position:relative;
+             margin-left: 1.5rem;
+        }
+    }
+
+    &__label {
+        width: 100%;
+        @include font-stack-subheader-mobile;
+        margin-bottom: 0.25rem;
+        @include tablet {
+            position: absolute;
+            left: 0;
+            bottom: 100%;
+        }
+    }
+
+    &__box {
+        padding: 0.75rem;
+        outline: none;
+        height: 6rem;
+        width:100%;
+        min-width: 15rem;
+        margin-bottom: 1rem;
+        background-color: $alabaster;
+        @include styleInputMobile;
+        resize: none;
+        @include tablet {
+            @include styleInputTablet;
+            margin-bottom: 0rem;
+            padding: 0.65rem;
+            margin-right: 1.5rem;
+            width: 100%;
+        }
+
+         &::placeholder {
+            @include font-placeholder-text;
+            vertical-align: middle;
+        }
+
+        &[type = "text"] {
+            @include font-placeholder-text;
+        }  
+    }
+}
+
+
+
+
+
+
+
