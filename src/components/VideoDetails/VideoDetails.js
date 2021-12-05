@@ -1,4 +1,5 @@
 import './VideoDetails.scss';
+import CommentBox from '../CommentBox/CommentBox';
 import viewsIcon from '../../assets/images/views.svg';
 import likesIcon from '../../assets/images/likes.svg';
 
@@ -31,6 +32,7 @@ const VideoDetails = (props) => {
                 <p className='video-content__text'>{description}</p>
                 <p className='video-content__comments-counter'>{comments.length} Comments</p>
             </div>
+            <CommentBox />
         </div>
     );
 };

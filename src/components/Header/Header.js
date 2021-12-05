@@ -9,7 +9,6 @@ import upload from '../../assets/images/upload.svg';
 const Header = () => {
     const clickHandler = (e) => {
         e.preventDefault();
-
     };
 
     const submitHandler = (e) => {
