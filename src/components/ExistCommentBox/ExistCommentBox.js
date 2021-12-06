@@ -22,7 +22,6 @@ const ExistCommentBox = (props) => {
             </ul>
         </div>
     );
-
 }
 
 export default ExistCommentBox;

@@ -7,20 +7,19 @@
     @include flex(space-between, flex-start, column, nowrap);
     padding: 1.5rem 1rem 0rem;
     @include tablet {
-        padding: 2.25rem 2.25rem 0;
+        padding: 2.25rem 2.25rem;
     }
     @include desktop {
-        padding-left: 8rem;
-        padding-right: 0rem;
+        padding: 2.25rem 0rem 4rem 6.5rem;
         width: 70%;
+        @include dividerStyleRight;
     }
-
 
     &__title {
         width: 100%;
         @include font-stack-page-header-mobile;
         padding-bottom: 1rem;
-        @include dividerStyle;
+        @include dividerStyleBottom;
         @include tablet {
             padding-bottom: 0rem;
             @include font-stack-page-header-tablet-desktop;
@@ -33,7 +32,7 @@
         width: 100%; 
         margin-top: 1rem;
         padding-bottom: 1rem;
-        @include dividerStyle;
+        @include dividerStyleBottom;
         @include tablet {
             @include flex(space-between, flex-start, row, nowrap); 
             padding-bottom: 0.5rem;
@@ -69,9 +68,11 @@
     &__date-publication {
        @include font-stack-body-mobile;
        color: $silver;
-       @include font-stack-body-tablet-desktop;
-       color: $silver;
-    }
+       @include tablet {
+            @include font-stack-body-tablet-desktop;
+            color: $silver;
+        }  
+    } 
 
     &__popularity{
         width: 50%;

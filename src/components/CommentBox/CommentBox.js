@@ -4,9 +4,7 @@ import Button from '../Button/Button';
 import add_comment from '../../assets/images/add_comment.svg';
 
 const CommentBox = () => {
-    const clickHandler = (e) => {
-        e.preventDefault();
-    };
+    const clickHandler = (e) => { e.preventDefault() };
 
     return (
         <div className='comment-container'>
@@ -18,7 +16,7 @@ const CommentBox = () => {
                 <Button icon={add_comment} title='COMMENT' clickHandler={clickHandler} />
             </form>
         </div>
-    )
-}
+    );
+};
 
 export default CommentBox;

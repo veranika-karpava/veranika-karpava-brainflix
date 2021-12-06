@@ -7,13 +7,8 @@ import upload from '../../assets/images/upload.svg';
 
 
 const Header = () => {
-    const clickHandler = (e) => {
-        e.preventDefault();
-    };
-
-    const submitHandler = (e) => {
-        e.preventDefault();
-    };
+    const clickHandler = (e) => { e.preventDefault() };
+    const submitHandler = (e) => { e.preventDefault() };
 
     return (
         <header className='header'>

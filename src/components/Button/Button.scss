@@ -2,13 +2,13 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/variables" as *;
 
-.button{
+.button {
     width: 100%;
     @include tablet {
         width:33%;
     }
     
-    &__component{
+    &__component {
         @include flex(flex-start, center, row, nowrap);
         @include buttonStyle;
         @include font-stack-button-labels;

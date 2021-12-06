@@ -31,10 +31,12 @@
     }
 
     &__input {
+        background-color: $alabaster;
         outline: none;
         width: 90%;
         padding:0.625rem 0.75rem 0.625rem 2rem;
         object-fit: cover;
+        box-shadow: 0 0 0px 1000px $alabaster inset;
         @include styleInputMobile;
         @include tablet {
             @include styleInputTablet;

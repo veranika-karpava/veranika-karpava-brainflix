@@ -48,10 +48,17 @@
         border-radius: 4px;
     }
 
-    @mixin dividerStyle {
+    @mixin dividerStyleBottom {
        border-bottom: 1px solid $mercury; 
     }
+    @mixin dividerStyleBottomNone {
+        border-bottom: none; 
+     }
 
-    @mixin dividerStyleLeft {
-        border-left: 1px solid $mercury; 
+    @mixin dividerStyleTop {
+        border-top: 1px solid $mercury; 
+     }
+
+    @mixin dividerStyleRight {
+        border-right: 1px solid $mercury; 
      }
