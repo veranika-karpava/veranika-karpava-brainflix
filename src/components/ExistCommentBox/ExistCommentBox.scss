@@ -1,0 +1,148 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.exist-comment-box {
+
+
+    &__list-comment {
+        list-style-type: none;
+        padding: 0;
+        width: 100%;
+    }
+
+    &__item-comment{
+        width: 100%;
+        @include flex(flex-end, flex-start, row, nowrap);
+        padding: 1rem 0rem;
+        @include dividerStyle;
+        @include tablet {
+            padding: 1.5rem 0rem;
+        }
+        @include desktop {
+            padding: 1.5rem 1.5rem 1.5rem 0rem;
+        }
+    }
+
+    &__avatar-grey {
+        background-color: $mercury;
+        border-radius: 50% 50%;
+        max-width: 2.25rem;
+        max-height: 2.25rem;
+        min-width: 2.25rem;
+        min-height: 2.25rem;
+        margin-right: 1rem;
+    }
+
+    &__content {
+        width: 82%;
+        @include font-stack-body-mobile;
+        position: relative;
+            @include tablet {
+                width: 95%;  
+                @include font-stack-body-tablet-desktop;
+                margin-left:1.5rem;
+            }
+    }
+
+    &__author {
+    @include font-stack-section-header;
+    margin-bottom: 0.5rem;
+    @include tablet {
+        @include font-stack-section-header-tablet;
+        }
+    }
+
+    &__datestamp {
+        @include font-stack-body-mobile;
+        color: $silver;
+        position: absolute;
+        right:0%;
+        top: 0%;
+        @include tablet {
+            @include font-stack-body-tablet-desktop;
+            color: $silver;
+            }
+    }
+}
+
+
+
+// .exist-comment-box{
+//     // @include tablet {
+//     //     margin-left: 3.75rem;
+//     //     width: 90%;
+//     // }
+
+//     // @include desktop {
+//     //     width: 50%;
+//     //     margin: 0 auto;
+//     // }
+
+//     &__list-comment {
+//     width:100%;
+//     padding: 1rem 0rem;
+//     @include flex(flex-end, flex-start, c, nowrap); 
+//     border-bottom: 1px solid $mercury;
+//     // @include desktop {
+//     //     padding: 1.5rem 0rem;  
+//     // }
+//     }
+
+//     &__avatar-grey {
+//         background-color: $mercury;
+//         border-radius: 50% 50%;
+//         width: 2.25rem;
+//         height: 2.25rem;
+//         margin-right: 1.5rem;
+//         text-align: right;
+//         // @include tablet {
+//         //     width: 3.25rem;
+//         //     height: 3.25rem;
+//         // }
+// }
+
+// &__list {
+//     width:100%;
+//     padding: 1rem 0rem;
+//     @include flex(flex-end, flex-start, row, nowrap); 
+//     border-bottom: 1px solid $mercury;
+//     @include desktop {
+//         padding: 1.5rem 0rem;  
+//     }
+// }
+
+
+
+// &__content {
+//     width: 80%;
+//     @include fontStackBodyMobile;
+//     position: relative;
+//     @include tablet {
+//         width: 90%;  
+//         @include fontStackBodyTabletDesktop;
+//     }
+// }
+
+// &__name-commenter {
+//     @include font-stack (0.8125rem, 600, 1.125rem, $bandsite-black);
+//     margin-bottom: 0.5rem;
+//     @include tablet {
+//         @include font-stack (0.875rem, 600, 1.375rem, $bandsite-black);
+//     }
+// }
+
+// &__timestamp {
+//     color: $silver;
+//     position: absolute;
+//     right:0%;
+//     top: 0%
+// }
+
+// &__text {
+//     @include fontStackBodyMobile;
+//     @include tablet {
+//         @include fontStackBodyTabletDesktop;
+//     }
+// }
+// }

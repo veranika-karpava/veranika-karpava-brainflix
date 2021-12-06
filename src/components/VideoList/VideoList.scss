@@ -8,4 +8,7 @@
     list-style-type: none;
     padding: 0;
     @include flex(space-between, flex-start, column, nowrap);
+    @include desktop {
+        width: 70%;
+    }
 }
