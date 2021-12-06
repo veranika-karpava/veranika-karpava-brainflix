@@ -13,9 +13,16 @@ class App extends Component {
     selectedVideo: videoDataDetail[0]
   }
 
+  handleVideoSelect = title => {
+    this.setState({
+      selectedVideo: videoDataDetail.find(video => video.title === title)
+    })
+  };
+
   render() {
-    // console.log(this.state.shortVideos)
-    console.log(this.state.selectedVideo)
+    // for filter sidebar list
+    const newVideoList = videoData.filter(video => video.title !== this.state.selectedVideo.title);
+
     return (
       <>
         <Header />
@@ -26,7 +33,9 @@ class App extends Component {
               <VideoDetails selectedVideo={this.state.selectedVideo} />
               <aside className='related-videos'>
                 <h2 className='related-videos__title'>NEXT VIDEOS</h2>
-                <VideoList shortVideos={this.state.shortVideos} />
+                <VideoList
+                  shortVideos={newVideoList}
+                  onVideoSelect={this.handleVideoSelect} />
               </aside>
             </div>
           </section>

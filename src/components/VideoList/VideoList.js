@@ -12,6 +12,7 @@ const VideoList = (props) => {
                         image={video.image}
                         title={video.title}
                         channel={video.channel}
+                        onVideoSelect={props.onVideoSelect}
                     />
                 )
             })}
