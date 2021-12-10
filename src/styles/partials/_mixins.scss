@@ -42,7 +42,7 @@
 
     @mixin buttonStyleTablet {
         height: 2.5rem;
-        min-width:9.375rem;
+        max-width:9.375rem;
         background-color: $brainflix-blue;
         border: none;
         border-radius: 4px;
@@ -62,3 +62,14 @@
     @mixin dividerStyleRight {
         border-right: 1px solid $mercury; 
      }
+
+     @mixin borderStyle {
+        border: none;
+        border-radius: 4px;
+    }
+
+    @mixin formStyle {
+        background-color: $alabaster; 
+        outline: none;
+        padding: 0.75rem;
+    }

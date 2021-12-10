@@ -1,0 +1,26 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+
+
+.nav-button {
+    @include buttonStyle;
+    padding: 0.55rem;
+    text-align: center;
+    width: 100%;
+    @include tablet {
+        @include buttonStyleTablet;
+        width:33%;
+    }
+
+    &__link {
+        width: 100%;
+        text-decoration: none;
+        @include font-stack-button-labels;
+    }
+
+    &__icon{
+        float:left;
+    }
+}

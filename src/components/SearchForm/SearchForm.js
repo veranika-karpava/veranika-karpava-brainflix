@@ -5,9 +5,9 @@ import search from '../../assets/images/search.svg';
 const SearchForm = ({ submitHandler }) => {
 
     return (
-        <form className="search" >
+        <form className="search" onSubmit={submitHandler}>
             <label className="search__label" htmlFor="search"></label>
-            <button className='search__button' type='submit' onClick={submitHandler}>
+            <button className='search__button' type='submit'>
                 <img className="search__icon-search" src={search} alt='Search' />
             </button>
             <input type="search" className="search__input" placeholder="Search" id="search" name="search" />

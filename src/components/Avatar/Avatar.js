@@ -4,7 +4,7 @@ import mohan_muruge from '../../assets/images/mohan_muruge.jpg';
 function Avatar(props) {
     return (
         <div className={props.className}>
-            <img src={mohan_muruge} alt="Mohan-muruge Avatar" className={`${props.className}__image`} />
+            <img src={mohan_muruge} alt="User Avatar" className={`${props.className}__image`} />
         </div>
     );
 };

@@ -1,12 +1,17 @@
+import { Link } from 'react-router-dom';
 import './Logo.scss';
 import brainflixlogo from '../../assets/images/brainflixlogo.svg';
 
 
-const Logo = () => {
+const Logo = ({ path }) => {
+    console.log(path)
     return (
         <div className='header__logo'>
-            <img className='header__image-logo' src={brainflixlogo} alt='BrainFlix Logo' />
+            <Link to={path}>
+                <img className='header__image-logo' src={brainflixlogo} alt='BrainFlix Logo' />
+            </Link>
         </div>
+
     );
 };
 

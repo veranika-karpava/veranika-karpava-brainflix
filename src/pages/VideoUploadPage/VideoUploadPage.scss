@@ -1,0 +1,55 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.upload-video {
+    @include dividerStyleTop;
+    padding: 1.5rem 1rem;
+    @include tablet {
+        padding: 2.25rem;
+    }
+    @include desktop {
+        padding: 2.25rem 8rem;
+    }
+
+    &__title {
+        width: 100%;
+        @include font-stack-page-header-mobile;
+        padding-bottom: 1rem;
+        @include tablet {
+            padding-bottom: 1.5rem;
+            @include font-stack-page-header-tablet-desktop;
+            @include dividerStyleBottom;
+        }
+    }
+}
+
+.form {
+    @include flex(space-between, flex-start, column, nowrap);
+
+    &__button-container {
+        width: 100%;
+        @include flex(space-between, flex-end, column, nowrap);
+        @include tablet {
+            @include flex(flex-start, flex-end, row-reverse, nowrap);
+            margin-top: 1.5rem;  
+        }
+    }
+
+    &__button-reset{
+        width: calc(100% - 1.5rem);
+        margin-top: 1rem;
+        border: none;
+        min-height: 2.5rem;
+        max-height: 2.5rem;
+        background-color: $white;
+        @include font-stack-button-labels;
+        color: $brainflix-blue;
+        @include tablet {
+            width: 30%;
+            max-width:9.375rem;
+            margin-top: 0rem;
+        }
+    }
+}
+

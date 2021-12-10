@@ -59,7 +59,6 @@
 
          &::placeholder {
             @include font-placeholder-text;
-            vertical-align: middle;
         }
 
         &[type = "text"] {
