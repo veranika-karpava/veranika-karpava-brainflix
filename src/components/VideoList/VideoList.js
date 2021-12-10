@@ -2,17 +2,18 @@ import './VideoList.scss';
 import VideoItem from '../VideoItem/VideoItem';
 
 const VideoList = (props) => {
+    console.log(props)
     return (
         <ul className="related-videos__list">
-            {props.shortVideos.map((video, i) => {
+            {props.videoList.map((video) => {
                 return (
                     <VideoItem
-                        key={i}
+                        key={video.id}
                         id={video.id}
                         image={video.image}
                         title={video.title}
                         channel={video.channel}
-                        onVideoSelect={props.onVideoSelect}
+                    // onVideoSelect={props.onVideoSelect}
                     />
                 )
             })}

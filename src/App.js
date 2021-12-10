@@ -33,8 +33,8 @@ class App extends Component {
         <BrowserRouter>
           <Header />
           <Switch>
-            <Route path="/" exact={true} component={HomePage} />
-            <Route path="/video-upload" exact={true} component={VideoUploadPage} />
+            <Route path="/" exact component={HomePage} />
+            <Route path="/video-upload" exact component={VideoUploadPage} />
             {/* <RouteRoute path="/video-player" exact={true} component={VideoUploadPage} /> */}
           </Switch>
         </BrowserRouter>

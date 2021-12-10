@@ -1,12 +1,17 @@
 import './VideoDetails.scss';
 import CommentBox from '../CommentBox/CommentBox';
 import ExistCommentBox from '../ExistCommentBox/ExistCommentBox';
+import formatTimestamp from '../../utils/formatDate';
 import viewsIcon from '../../assets/images/views.svg';
 import likesIcon from '../../assets/images/likes.svg';
 
-const VideoDetails = (props) => {
-    const { title, channel, timestamp, views, likes, description, comments } = props.selectedVideo;
-    const timestampDate = new Date(timestamp).toLocaleDateString("en-US", { timeZone: "UTC", year: "numeric", month: "2-digit", day: "2-digit" });
+const VideoDetails = ({ selectedVideo }) => {
+    if (!selectedVideo) {
+        return <p></p>
+    }
+    const { title, channel, timestamp, views, likes, description, comments } = selectedVideo;
+
+    console.log(selectedVideo)
 
     return (
         <div className='video-content'>
@@ -14,7 +19,7 @@ const VideoDetails = (props) => {
             <div className='video-content__details'>
                 <div className='video-content__publication'>
                     <p className='video-content__channel'>by {channel}</p>
-                    <p className='video-content__date-publication'>{timestampDate}</p>
+                    <p className='video-content__date-publication'> {formatTimestamp(timestamp)}</p>
                 </div>
                 <div className='video-content__popularity'>
                     <p className='video-content__views-content'>

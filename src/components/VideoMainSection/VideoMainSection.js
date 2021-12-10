@@ -1,7 +1,10 @@
 import './VideoMainSection.scss';
 
-const VideoMainSection = (props) => {
-    const { image, video } = props.selectedVideo;
+const VideoMainSection = ({ selectedVideo }) => {
+    if (!selectedVideo) {
+        return <p>...Loading Video...</p>
+    }
+    const { image, video } = selectedVideo;
 
     return (
         <div className='video-container'>
