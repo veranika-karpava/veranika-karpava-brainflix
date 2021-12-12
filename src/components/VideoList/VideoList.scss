@@ -3,12 +3,28 @@
 @use "../../styles/partials/variables" as *;
 
 
-.related-videos__list {
+.related-videos {
+
+    &__title {
+        margin-bottom: 1.5rem;
+        @include font-stack-subheader-mobile;
+        @include tablet {
+            @include font-stack-subheader-tablet-desktop;
+            margin-bottom: 2.25rem;
+        }
+        @include desktop {
+            margin-bottom: 0rem;
+        }
+    }
+
+    &__list {
     width: 100%;
     list-style-type: none;
     padding: 0;
     @include flex(space-between, flex-start, column, nowrap);
     @include desktop {
         width: 85%;
+        }
     }
+
 }

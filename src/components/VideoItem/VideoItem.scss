@@ -17,6 +17,12 @@
     }
 }
 
+.related-videos__link {
+    width: 100%;
+    text-decoration: none;
+    @include flex(space-between, flex-start, row, nowrap);
+}
+
 .related-videos__box-image {
     width:45%;
     overflow: hidden;

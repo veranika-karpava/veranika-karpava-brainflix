@@ -6,12 +6,13 @@ import viewsIcon from '../../assets/images/views.svg';
 import likesIcon from '../../assets/images/likes.svg';
 
 const VideoDetails = ({ selectedVideo }) => {
+    console.log(selectedVideo)
     if (!selectedVideo) {
         return <p></p>
     }
     const { title, channel, timestamp, views, likes, description, comments } = selectedVideo;
 
-    console.log(selectedVideo)
+    // console.log(selectedVideo)
 
     return (
         <div className='video-content'>

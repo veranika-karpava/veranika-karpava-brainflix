@@ -11,37 +11,3 @@ body {
     font-family: 'AvenirNextLTPro', 'Calibri', sans-serif;
 }
 
-.video-section {
-    @include flex(space-between, flex-start, column, nowrap);
-
-    &__content-main {
-        @include desktop{
-            @include flex(space-between, flex-start, row, nowrap);
-        }
-    }
-}
-
-.related-videos {
-    width:100%;
-    padding: 1.5rem 1rem 0.5rem;
-    @include tablet {
-        padding: 0rem 2.25rem 0.75rem; 
-        width:53%;
-    }
-    @include desktop {
-        padding: 1.5rem 8rem 0rem 1.5rem;
-        width:50%;
-    }
-
-    &__title {
-        margin-bottom: 1.5rem;
-        @include font-stack-subheader-mobile;
-        @include tablet {
-            @include font-stack-subheader-tablet-desktop;
-            margin-bottom: 2.25rem;
-        }
-        @include desktop {
-            margin-bottom: 0rem;
-        }
-    }
-}

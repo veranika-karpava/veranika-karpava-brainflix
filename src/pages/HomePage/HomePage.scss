@@ -1,0 +1,33 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials//mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.video-section {
+    @include flex(space-between, flex-start, column, nowrap);
+
+    &__content-main {
+        @include desktop{
+            @include flex(space-between, flex-start, row, nowrap);
+        }
+    }
+}
+
+.related-videos {
+    width:100%;
+    padding: 1.5rem 1rem 0.5rem;
+    @include tablet {
+        padding: 0rem 2.25rem 0.75rem; 
+        width:53%;
+    }
+    @include desktop {
+        padding: 1.5rem 8rem 1.5rem 1.5rem;
+        width:50%;
+        @include dividerStyleLeft;
+    }
+
+}
+
+.video-container__message{
+    padding-top: 10rem;
+    text-align: center;
+}

@@ -1,9 +1,6 @@
 import './VideoMainSection.scss';
 
 const VideoMainSection = ({ selectedVideo }) => {
-    if (!selectedVideo) {
-        return <p>...Loading Video...</p>
-    }
     const { image, video } = selectedVideo;
 
     return (

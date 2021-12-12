@@ -4,7 +4,6 @@ import brainflixlogo from '../../assets/images/brainflixlogo.svg';
 
 
 const Logo = ({ path }) => {
-    console.log(path)
     return (
         <div className='header__logo'>
             <Link to={path}>

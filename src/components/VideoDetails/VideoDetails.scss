@@ -12,7 +12,7 @@
     @include desktop {
         padding: 2.25rem 0rem 4rem 6.5rem;
         width: 70%;
-        @include dividerStyleRight;
+        // @include dividerStyleRight;
     }
 
     &__title {

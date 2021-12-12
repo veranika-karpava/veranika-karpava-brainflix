@@ -1,8 +1,6 @@
 import './App.scss';
 import { Component } from 'react';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
-
-
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './components/Header/Header';
 import HomePage from './pages/HomePage/HomePage';
 import VideoUploadPage from './pages/VideoUploadPage/VideoUploadPage';
@@ -34,8 +32,8 @@ class App extends Component {
           <Header />
           <Switch>
             <Route path="/" exact component={HomePage} />
+            <Route path="/video-player/:videoId" exact component={HomePage} />
             <Route path="/video-upload" exact component={VideoUploadPage} />
-            {/* <RouteRoute path="/video-player" exact={true} component={VideoUploadPage} /> */}
           </Switch>
         </BrowserRouter>
 
