@@ -4,11 +4,6 @@ import { NavLink } from 'react-router-dom';
 const VideoItem = (props) => {
     const { title, image, channel, id } = props;
 
-    // const handleVideoSelect = (e) => {
-    //     e.preventDefault();
-    //     props.onVideoSelect(props.title)
-    // }
-
     return (
         <li className='related-videos__item'>
             <NavLink to={`/video-player/${id}`} className="related-videos__link">

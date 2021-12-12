@@ -11,7 +11,6 @@ class VideoUploadPage extends Component {
     state = {
         onSubmit: false
     }
-
     clickHandler = (e) => {
         e.preventDefault();
         this.setState({ onSubmit: true }, () => {
@@ -19,12 +18,10 @@ class VideoUploadPage extends Component {
         }
         )
     }
-
     render() {
         if (this.state.onSubmit) {
             return <Redirect to='/' />
         }
-
         return (
             <section className='upload-video'>
                 <h1 className='upload-video__title'>Upload Video</h1>
