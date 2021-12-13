@@ -46,7 +46,7 @@
         width:100%;
         min-width: 15rem;
         margin-bottom: 1rem;
-        background-color: $alabaster;
+        background-color: $bg-color-form-field;
         @include styleInputMobile;
         resize: none;
         @include tablet {

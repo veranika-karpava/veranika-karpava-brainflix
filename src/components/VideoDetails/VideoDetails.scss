@@ -67,10 +67,10 @@
 
     &__date-publication {
        @include font-stack-body-mobile;
-       color: $silver;
+       color: $secondary-text-color;
        @include tablet {
             @include font-stack-body-tablet-desktop;
-            color: $silver;
+            color: $secondary-text-color;
         }  
     } 
 
@@ -84,11 +84,11 @@
 
     &__views-content {
         @include font-stack-body-mobile;
-        color: $silver;
+        color:$secondary-text-color;
         padding-bottom: 1rem;
         @include tablet {
             @include font-stack-body-tablet-desktop;
-            color: $silver;
+            color:$secondary-text-color;
             padding-bottom: 0rem; 
             margin-right: 1.5rem;
         }
@@ -102,10 +102,10 @@
 
     &__likes-content{
         @include font-stack-body-mobile;
-        color: $silver;
+        color: $secondary-text-color;
         @include tablet {
             @include font-stack-body-tablet-desktop;
-            color: $silver;
+            color: $secondary-text-color;
         }
     }
 

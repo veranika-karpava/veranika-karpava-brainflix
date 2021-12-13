@@ -42,9 +42,9 @@
         border: none;
         min-height: 2.5rem;
         max-height: 2.5rem;
-        background-color: $white;
+        background-color: $bg-color;
         @include font-stack-button-labels;
-        color: $brainflix-blue;
+        color: $button-color;
         @include tablet {
             width: 30%;
             max-width:9.375rem;

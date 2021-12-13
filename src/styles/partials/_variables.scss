@@ -1,14 +1,14 @@
 // Primary colors
-$brainflix-black: #323232; /* text color*/
-$brainflix-blue: #0095FF; /* Primary CTA color. Active form field outline color.*/
-$silver: #AFAFAF;/* Secondary text color. Text Label color*/
-$white: #FFFFFF;/* Background color. CTA text color.*/
+$text-color: #323232; /* text color*/
+$button-color: #0095FF; /* Primary CTA color. Active form field outline color.*/
+$secondary-text-color: #AFAFAF;/* Secondary text color. Text Label color*/
+$bg-color: #FFFFFF;/* Background color. CTA text color.*/
 
 // Secondary colors
-$brainflix-darkblack: #000000; /*  Video player components.*/
-$brainflix-darkblue: #0065AD; /*  CTA hover state color.*/
-$mercury: #E1E1E1; /* Divider line. Form field outline color.*/
-$alabaster: #FAFAFA; /*Form field background color.*/
+$bg-video-color: #000000; /*  Video player components.*/
+$hover-color: #0065AD; /*  CTA hover state color.*/
+$line-divider-color: #E1E1E1; /* Divider line. Form field outline color.*/
+$bg-color-form-field: #FAFAFA; /*Form field background color.*/
 
 // screen size
 $desktop-breakpoint: 80rem;    // 1280px

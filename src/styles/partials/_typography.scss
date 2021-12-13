@@ -35,43 +35,43 @@
 
 // Header page
 @mixin font-stack-page-header-mobile {
-    @include font-stack (1.5rem, 700, 2rem, $brainflix-black);
+    @include font-stack (1.5rem, 700, 2rem, $text-color);
 }
 
 @mixin font-stack-page-header-tablet-desktop {
-    @include font-stack (2.0625rem, 700, 2.75rem, $brainflix-black);
+    @include font-stack (2.0625rem, 700, 2.75rem, $text-color);
 }
 
 // Section header 
 @mixin font-stack-section-header {
-    @include font-stack (0.8125rem, 700, 1.125rem, $brainflix-black);
+    @include font-stack (0.8125rem, 700, 1.125rem, $text-color);
 }
 
 @mixin font-stack-section-header-tablet {
-    @include font-stack (0.875rem, 700, 1.375rem, $brainflix-black);
+    @include font-stack (0.875rem, 700, 1.375rem, $text-color);
 }
 
 // Subheader 
 @mixin font-stack-subheader-mobile {
-    @include font-stack (0.8125rem, 600, 1.125rem, $silver);
+    @include font-stack (0.8125rem, 600, 1.125rem, $secondary-text-color)
 }
 
 @mixin font-stack-subheader-tablet-desktop{
-    @include font-stack (0.875rem, 700, 1.375rem, $silver);
+    @include font-stack (0.875rem, 700, 1.375rem, $secondary-text-color);
 }
 
 // Body
 @mixin font-stack-body-mobile {
-    @include font-stack (0.8125rem, 400, 1.125rem, $brainflix-black);
+    @include font-stack (0.8125rem, 400, 1.125rem, $text-color);
 }
 
 @mixin font-stack-body-tablet-desktop{
-    @include font-stack (0.875rem, 400, 1.375rem, $brainflix-black);
+    @include font-stack (0.875rem, 400, 1.375rem, $text-color);
 }
 
 // Labels&Buttons
 @mixin font-stack-button-labels {
-    @include font-stack (0.75rem, 600, 1.25rem, $white);
+    @include font-stack (0.75rem, 600, 1.25rem, $bg-color);
 }
 
 @mixin font-placeholder-text {

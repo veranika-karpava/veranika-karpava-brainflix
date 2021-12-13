@@ -62,8 +62,9 @@ class HomePage extends Component {
 
     render() {
         // for filter VideoList
-        if (this.state.videoList.length === 0 || !this.state.selectedVideo)
+        if (this.state.videoList.length === 0 || !this.state.selectedVideo) {
             return <p className="video-container__message">...Loading Video...</p>;
+        }
         const newVideoList = this.state.videoList.filter(video => video.id !== this.state.selectedVideo.id);
 
         return (

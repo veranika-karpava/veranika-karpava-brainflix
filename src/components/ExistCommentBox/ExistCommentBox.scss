@@ -26,7 +26,7 @@
     }
 
     &__avatar-grey {
-        background-color: $mercury;
+        background-color: $line-divider-color;
         border-radius: 50% 50%;
         max-width: 2.25rem;
         max-height: 2.25rem;
@@ -56,13 +56,13 @@
 
     &__datestamp {
         @include font-stack-body-mobile;
-        color: $silver;
+        color: $secondary-text-color;
         position: absolute;
         right:0%;
         top: 0%;
         @include tablet {
             @include font-stack-body-tablet-desktop;
-            color: $silver;
+            color:$secondary-text-color;
         }
     }
 }

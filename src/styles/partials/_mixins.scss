@@ -22,12 +22,12 @@
 
     @mixin styleInputMobile{
         border-radius: 4px;
-        border: 1px solid $mercury;
+        border: 1px solid $line-divider-color;
         min-height: 2.25rem;
     }
     @mixin styleInputTablet{
         border-radius: 4px;
-        border: 1px solid $mercury;
+        border: 1px solid $line-divider-color;
         min-height: 2.5rem;
         max-height: 2.5rem;
     }
@@ -35,7 +35,7 @@
     @mixin buttonStyle {
         min-height: 2.5rem;
         max-height: 2.5rem;
-        background-color: $brainflix-blue;
+        background-color: $button-color;
         border: none;
         border-radius: 4px;
     }
@@ -43,28 +43,28 @@
     @mixin buttonStyleTablet {
         height: 2.5rem;
         max-width:9.375rem;
-        background-color: $brainflix-blue;
+        background-color: $button-color;
         border: none;
         border-radius: 4px;
     }
 
     @mixin dividerStyleBottom {
-       border-bottom: 1px solid $mercury; 
+       border-bottom: 1px solid $line-divider-color; 
     }
     @mixin dividerStyleBottomNone {
         border-bottom: none; 
      }
 
     @mixin dividerStyleTop {
-        border-top: 1px solid $mercury; 
+        border-top: 1px solid $line-divider-color; 
      }
 
     @mixin dividerStyleRight {
-        border-right: 1px solid $mercury; 
+        border-right: 1px solid $line-divider-color; 
      }
 
      @mixin dividerStyleLeft {
-        border-left: 1px solid $mercury; 
+        border-left: 1px solid $line-divider-color; 
      }
 
      @mixin borderStyle {
@@ -73,7 +73,7 @@
     }
 
     @mixin formStyle {
-        background-color: $alabaster; 
+        background-color: $bg-color-form-field; 
         outline: none;
         padding: 0.75rem;
     }

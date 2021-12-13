@@ -3,7 +3,7 @@
 @use "../../styles/partials/variables" as *;
 
 .video-container {
-    background-color: $brainflix-darkblack;
+    background-color: $bg-video-color;
     overflow: hidden;
     width: 100%;
     @include tablet {

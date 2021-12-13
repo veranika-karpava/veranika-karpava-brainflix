@@ -19,11 +19,11 @@ const VideoDetails = ({ selectedVideo }) => {
                 </div>
                 <div className='video-content__popularity'>
                     <p className='video-content__views-content'>
-                        <img className='video-content__image-views' src={viewsIcon} alt='Views' />
+                        <img className='video-content__image-views' src={viewsIcon} alt='Views icon' />
                         {views}
                     </p>
                     <p className='video-content__likes-content'>
-                        <img className='video-content__image-likes' src={likesIcon} alt='Likes' />
+                        <img className='video-content__image-likes' src={likesIcon} alt='Likes icon' />
                         {likes}
                     </p>
                 </div>
