@@ -1,8 +1,7 @@
 import './VideoItem.scss';
 import { NavLink } from 'react-router-dom';
 
-const VideoItem = (props) => {
-    const { title, image, channel, id } = props;
+const VideoItem = ({ title, image, channel, id }) => {
 
     return (
         <li className='related-videos__item'>

@@ -9,7 +9,6 @@ const CommentBox = () => {
         e.target.reset()
     };
 
-
     return (
         <div className='comment-container'>
             <Avatar className='comment-avatar' />

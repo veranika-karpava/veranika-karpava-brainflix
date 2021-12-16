@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom';
 import './NavButton.scss';
 
-const NavButton = (props) => {
-    const { icon, title, path } = props;
-
+const NavButton = ({ icon, title, path }) => {
     return (
         <div className='nav-button'>
             <Link to={path} className='nav-button__link'>

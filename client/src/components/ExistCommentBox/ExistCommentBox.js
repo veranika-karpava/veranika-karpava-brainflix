@@ -1,12 +1,12 @@
 import './ExistCommentBox.scss';
 import formatTimestamp from '../../utils/formatDate';
 
-const ExistCommentBox = (props) => {
+const ExistCommentBox = ({ comments }) => {
 
     return (
         <div className='exist-comment-box'>
             <ul className='exist-comment-box__list-comment'>
-                {props.comments.map((comment, i) => {
+                {comments.map((comment, i) => {
                     return (
                         <li className='exist-comment-box__item-comment' key={i}>
                             <div className='exist-comment-box__avatar-grey'></div>

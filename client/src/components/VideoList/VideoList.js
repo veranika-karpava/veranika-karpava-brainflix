@@ -1,13 +1,12 @@
 import './VideoList.scss';
 import VideoItem from '../VideoItem/VideoItem';
 
-const VideoList = (props) => {
-
+const VideoList = ({ videoList }) => {
     return (
         <>
             <h2 className='related-videos__title'>NEXT VIDEOS</h2>
             <ul className="related-videos__list">
-                {props.videoList.map((video) => {
+                {videoList.map((video) => {
                     return (
                         <VideoItem
                             key={video.id}
