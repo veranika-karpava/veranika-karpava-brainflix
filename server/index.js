@@ -1,5 +1,5 @@
 const express = require('express');
-// const videoRouter = require('./routes/videos');
+const videoRouter = require('./routes/videos');
 
 
 
@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5050;
 
 
 // middleware
-// app.use('/videos', videoRouter);
+app.use('/videos', videoRouter);
 
 
 app.listen(PORT, () => {

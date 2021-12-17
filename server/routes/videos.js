@@ -23,4 +23,17 @@ videoRouter.get('/', (_req, res) => {
     res.status(200).send(videosData)
 })
 
+// get request for videoId router
+videoRouter.get('/:videoId', (req, res) => {
+    const videoId = req.params.videoId;
+    let videosData = readFile();
+    const video = videosData.find(video => video.id === videoId);
+
+    if (!video) {
+        return res.status(404).send("Video not found");
+    }
+    return res.status(200).json(video);
+});
+
+
 module.exports = videoRouter;
