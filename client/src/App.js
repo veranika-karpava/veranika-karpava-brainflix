@@ -14,16 +14,14 @@ class App extends Component {
   render() {
 
     return (
-      <>
-        <BrowserRouter>
-          <Header />
-          <Switch>
-            <Route path="/" exact component={HomePage} />
-            <Route path="/video-player/:videoId" component={HomePage} />
-            <Route path="/video-upload" component={VideoUploadPage} />
-          </Switch>
-        </BrowserRouter>
-      </>
+      <BrowserRouter>
+        <Header />
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/video-player/:videoId" component={HomePage} />
+          <Route path="/video-upload" component={VideoUploadPage} />
+        </Switch>
+      </BrowserRouter>
     )
   }
 }
