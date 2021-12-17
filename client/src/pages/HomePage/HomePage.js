@@ -1,10 +1,14 @@
 import './HomePage.scss';
 import React, { Component } from 'react';
 import axios from 'axios';
-import { API_URL, API_KEY } from '../../utils/apiUtil';
+// import { API_URL, API_KEY } from '../../utils/apiUtil';
 import VideoMainSection from '../../components/VideoMainSection/VideoMainSection';
 import VideoDetails from '../../components/VideoDetails/VideoDetails';
 import VideoList from '../../components/VideoList/VideoList';
+
+// env variable = REACT_APP_API_URL
+
+const API_URL = process.env.REACT_APP_API_URL;
 
 class HomePage extends Component {
     state = {
@@ -16,7 +20,8 @@ class HomePage extends Component {
         const currentVideo = this.props.match.params.videoId;
 
         axios
-            .get(`${API_URL}/videos${API_KEY}`)
+
+            .get(`${API_URL}/videos`)
             .then((response) => {
                 const videoResults = response.data;
                 this.setState({
@@ -50,7 +55,7 @@ class HomePage extends Component {
     // fetch function
     fetchVideoDetails = (videoId) => {
         axios
-            .get(`${API_URL}/videos/${videoId}${API_KEY}`)
+            .get(`${API_URL}/videos/${videoId}`)
             .then(response => {
                 const videoDetailResult = response.data;
                 this.setState({
