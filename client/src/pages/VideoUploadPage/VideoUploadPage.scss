@@ -39,8 +39,10 @@
     }
 
     &__preview-image {
+        padding: 0rem;
         width:100%;
         margin-bottom: 1rem;
+        border: none;
         @include tablet { 
             margin: 1.5rem 0; 
             width: 50%;
@@ -67,6 +69,8 @@
         }
 
     &__video-description{
+        padding: 0rem;
+        border:none;
         width:100%;
         margin-bottom: 1rem;
         @include flex(space-between, flex-start, column, nowrap);

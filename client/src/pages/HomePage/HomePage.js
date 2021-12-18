@@ -70,19 +70,17 @@ class HomePage extends Component {
         const newVideoList = this.state.videoList.filter(video => video.id !== this.state.selectedVideo.id);
 
         return (
-            <>
-                <main>
-                    <section className="video-section">
-                        <VideoMainSection selectedVideo={this.state.selectedVideo} />
-                        <div className='video-section__content-main'>
-                            <VideoDetails selectedVideo={this.state.selectedVideo} />
-                            <aside className='related-videos'>
-                                <VideoList videoList={newVideoList} />
-                            </aside>
-                        </div>
-                    </section>
-                </main>
-            </>
+            <main>
+                <section className="video-section">
+                    <VideoMainSection selectedVideo={this.state.selectedVideo} />
+                    <div className='video-section__content-main'>
+                        <VideoDetails selectedVideo={this.state.selectedVideo} />
+                        <aside className='related-videos'>
+                            <VideoList videoList={newVideoList} />
+                        </aside>
+                    </div>
+                </section>
+            </main>
         )
     }
 }

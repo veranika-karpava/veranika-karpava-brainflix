@@ -1,3 +1,5 @@
+// function for format video url adress 
+
 const API_URL = process.env.REACT_APP_API_URL;
 
 function formatVideoImage(image) {

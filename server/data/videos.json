@@ -293,5 +293,24 @@
         "timestamp": 1639835735512
       }
     ]
+  },
+  {
+    "id": "d83a1a7c-321b-4580-9160-dcbc5802fb30",
+    "title": "4 Basic Skills For Beginner Cyclists",
+    "channel": "John Smith",
+    "image": "/images/upload_video_preview.jpg",
+    "description": "If you're new to cycling and don't know where to start, these simple and easy beginner skills are a good place to begin. Chris and James talk you through some easy bike skills that will develop your confidence and ability.",
+    "views": 45,
+    "likes": 38,
+    "duration": "03:06",
+    "timestamp": 1639839730282,
+    "comments": [
+      {
+        "name": "Veranika Karpava",
+        "comment": "They BLEW the ROOF off at their last event, once everyone started figuring out they were going. This is still simply the greatest opening of an event I have EVER witnessed.",
+        "likes": 0,
+        "timestamp": 1639839730282
+      }
+    ]
   }
 ]
