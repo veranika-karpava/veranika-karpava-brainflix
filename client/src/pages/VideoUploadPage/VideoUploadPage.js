@@ -1,35 +1,67 @@
 import React from 'react';
 import { Component } from 'react';
-import { Redirect } from 'react-router';
+import axios from 'axios';
 import './VideoUploadPage.scss';
 import Button from '../../components/Button/Button';
-import UploadForm from '../../components/UploadForm/UploadForm';
 import publish from '../../assets/images/publish.svg';
+import upload_video_preview from '../../assets/images/upload_video_preview.jpg';
+const API_URL = process.env.REACT_APP_API_URL;
 
 
 class VideoUploadPage extends Component {
     state = {
-        onSubmit: false
+        videosData: []
     }
-    clickHandler = (e) => {
+    // submit form with redirect to homePage
+    handleSubmitVideo = (e) => {
         e.preventDefault();
-        this.setState({ onSubmit: true }, () => {
-            alert('Video is uploaded')
-        }
-        )
+        axios
+            .post(`${API_URL}/videos`,
+                {
+                    title: e.target.titleVideo.value,
+                    description: e.target.descriptionVideo.value,
+                })
+            .then(response => {
+                alert('Video is uploaded')
+                e.target.reset()
+                this.setState({
+                    videosData: response.data
+                })
+                this.props.history.push('/');
+            })
+            .catch((error) => console.log(`Post request for upload video with: ${error}`))
+    };
+
+
+    // clickHandler for reusable button
+    clickHandler = (e) => { }
+
+    // resetHandler for redirect to homePage
+    resetHandler = (e) => {
+        e.preventDefault();
+        this.props.history.push('/');
     }
+
     render() {
-        if (this.state.onSubmit) {
-            return <Redirect to='/' />
-        }
         return (
             <section className='upload-video'>
                 <h1 className='upload-video__title'>Upload Video</h1>
-                <form className='form' >
-                    < UploadForm />
-                    <div className='form__button-container'>
+                <form className='upload-video__form' onSubmit={this.handleSubmitVideo} method="post">
+                    <div className='upload-video__form-container'>
+                        <div className='upload-video__preview-image'>
+                            <h3 className='upload-video__title-image'>VIDEO THUMBNAIL</h3>
+                            <img className='upload-video__image' src={upload_video_preview} alt='Preview Upload Video' />
+                        </div>
+                        <div className='upload-video__video-description'>
+                            <label htmlFor="title-video" className="upload-video__label">TITLE YOUR VIDEO</label>
+                            <input type="text" className="upload-video__input-title" placeholder="Add a title to your video" id="titleVideo" name="titleVideo" />
+                            <label htmlFor="description-video" className="upload-video__label">ADD A VIDEO DESCRIPTION</label>
+                            <textarea type="text" className="upload-video__input-description" placeholder="Add a description to your video" id="descriptionVideo" name="descriptionVideo" />
+                        </div>
+                    </div>
+                    <div className='upload-video__button-container'>
                         <Button icon={publish} title='PUBLISH' clickHandler={this.clickHandler} />
-                        <button type='reset' value='Reset' className='form__button-reset'>CANCEL</button>
+                        <button className='upload-video__button-reset' value='reset' onClick={this.resetHandler}>CANCEL</button>
                     </div>
                 </form>
             </section>

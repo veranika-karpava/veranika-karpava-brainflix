@@ -1,13 +1,11 @@
 import './HomePage.scss';
 import React, { Component } from 'react';
 import axios from 'axios';
-// import { API_URL, API_KEY } from '../../utils/apiUtil';
 import VideoMainSection from '../../components/VideoMainSection/VideoMainSection';
 import VideoDetails from '../../components/VideoDetails/VideoDetails';
 import VideoList from '../../components/VideoList/VideoList';
 
 // env variable = REACT_APP_API_URL
-
 const API_URL = process.env.REACT_APP_API_URL;
 
 class HomePage extends Component {
@@ -20,7 +18,6 @@ class HomePage extends Component {
         const currentVideo = this.props.match.params.videoId;
 
         axios
-
             .get(`${API_URL}/videos`)
             .then((response) => {
                 const videoResults = response.data;
@@ -33,7 +30,7 @@ class HomePage extends Component {
                 const videoToLoad = currentVideo ? currentVideo : defaultVideo;
                 this.fetchVideoDetails(videoToLoad)
             })
-            .catch((error) => console.log(error))
+            .catch((error) => console.log(`Get request for videoList: ${error}`))
     }
 
 
@@ -62,7 +59,7 @@ class HomePage extends Component {
                     selectedVideo: videoDetailResult,
                 });
             })
-            .catch((error) => console.log(error))
+            .catch((error) => console.log(`Get request for videoDetails with videoId: ${error}`))
     }
 
     render() {

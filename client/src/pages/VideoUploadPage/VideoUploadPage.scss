@@ -22,10 +22,112 @@
             @include dividerStyleBottom;
         }
     }
-}
 
-.form {
-    @include flex(space-between, flex-start, column, nowrap);
+    &__form {
+        @include flex(space-between, flex-start, column, nowrap);
+    }
+
+    &__form-container {
+        width:100%;
+        @include flex(space-between, flex-start, column, nowrap);
+    
+        @include desktop {
+            @include flex(space-between, flex-start, row, nowrap);
+            padding: 1.5rem 0;
+            @include dividerStyleBottom;
+        }
+    }
+
+    &__preview-image {
+        width:100%;
+        margin-bottom: 1rem;
+        @include tablet { 
+            margin: 1.5rem 0; 
+            width: 50%;
+        }
+        @include desktop {
+            width: 36%;  
+            margin: 0rem; 
+            max-width: 23.5rem;
+            height: 13.75rem;
+        } 
+    }
+
+    &__title-image {
+        width: 100%;
+        @include font-stack-subheader-mobile;
+        margin-bottom: 0.25rem;
+            }
+    
+    &__image {
+        width:100%;
+        object-fit: cover;
+        vertical-align: middle;
+        @include borderStyle;
+        }
+
+    &__video-description{
+        width:100%;
+        margin-bottom: 1rem;
+        @include flex(space-between, flex-start, column, nowrap);
+        @include tablet {
+            padding-bottom: 1.5rem;  
+            margin-bottom: 0rem;
+            @include dividerStyleBottom;
+        }
+        @include desktop{
+            width:62%;
+            @include dividerStyleBottomNone;
+            padding-bottom: 0rem;  
+        }   
+    }
+
+    &__label {
+        width:100%;
+        @include font-stack-subheader-mobile;
+        margin-bottom: 0.25rem;
+    }
+
+    &__input-title{
+        @include formStyle;
+        @include styleInputMobile;
+        width: 100%;
+        min-width: 15rem;
+        min-height: 2.5rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 0 0px 1000px $bg-color-form-field inset;
+        @include tablet {
+            margin-bottom: 1.5rem; 
+        }
+        @include desktop {
+            margin-bottom: 2.25rem; 
+        }
+
+        &::placeholder {
+            @include font-placeholder-text;
+        }
+
+        &[type = "text"] {
+            @include font-placeholder-text;
+        } 
+    }   
+    
+    &__input-description {
+        @include formStyle;
+        @include styleInputMobile;
+        width: 100%;
+        min-width: 15rem;
+        min-height: 6rem;
+        resize: none;
+
+        &::placeholder {
+            @include font-placeholder-text;
+        }
+
+        &[type = "text"] {
+            @include font-placeholder-text;
+        } 
+    }  
 
     &__button-container {
         width: 100%;
@@ -52,4 +154,3 @@
         }
     }
 }
-

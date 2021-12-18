@@ -53,7 +53,7 @@ videoRouter.post('/', (req, res) => {
         id: uuid(),
         title: title,
         channel: 'John Smith',
-        image: `http://${PORT}/images/upload_video_preview.jpg`,
+        image: '/images/upload_video_preview.jpg',
         description: description,
         views: 45,
         likes: 38,
@@ -64,14 +64,14 @@ videoRouter.post('/', (req, res) => {
             "comment": "They BLEW the ROOF off at their last event, once everyone started figuring out they were going. This is still simply the greatest opening of an event I have EVER witnessed.",
             "likes": 0,
             "timestamp": Date.now()
-        }
-        ]
+        }]
     };
+
     const videosData = readFile();;
     videosData.push(uploadVideo);
     writeFile(videosData);
 
-    return res.status(201).json(newGame);
+    return res.status(201).json(uploadVideo);
 });
 
 module.exports = videoRouter;
