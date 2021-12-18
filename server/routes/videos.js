@@ -3,11 +3,18 @@ const fs = require('fs');
 const { v4: uuid } = require('uuid');
 const videoRouter = express.Router();
 
-// function for reading videoData
+// function for reading data in videos.json
 const readFile = () => {
-    const videoData = fs.readFileSync('./data/videos.json');
-    return JSON.parse(videoData);
+    const videosData = fs.readFileSync('./data/videos.json');
+    return JSON.parse(videosData);
 }
+
+// function for writing data in videos.json
+const writeFile = (videosData) => {
+    fs.writeFileSync('./data/videos.json', JSON.stringify(videosData, null, 2));
+}
+
+const PORT = process.env.PORT || 5050;
 
 // get request for videoList
 videoRouter.get('/', (_req, res) => {
@@ -23,7 +30,7 @@ videoRouter.get('/', (_req, res) => {
     res.status(200).send(videosData)
 })
 
-// get request for videoId router
+// get request with videoId for videoDetails
 videoRouter.get('/:videoId', (req, res) => {
     const videoId = req.params.videoId;
     let videosData = readFile();
@@ -35,5 +42,36 @@ videoRouter.get('/:videoId', (req, res) => {
     return res.status(200).json(video);
 });
 
+// post request for upload form
+videoRouter.post('/', (req, res) => {
+    const { title, description } = req.body;
+    if (!title || !description) {
+        return res.status(400).send('Please make sure to include title and description of the video');
+    }
+
+    const uploadVideo = {
+        id: uuid(),
+        title: title,
+        channel: 'John Smith',
+        image: `http://${PORT}/images/upload_video_preview.jpg`,
+        description: description,
+        views: 45,
+        likes: 38,
+        duration: "03:06",
+        timestamp: Date.now(),
+        comments: [{
+            "name": "Veranika Karpava",
+            "comment": "They BLEW the ROOF off at their last event, once everyone started figuring out they were going. This is still simply the greatest opening of an event I have EVER witnessed.",
+            "likes": 0,
+            "timestamp": Date.now()
+        }
+        ]
+    };
+    const videosData = readFile();;
+    videosData.push(uploadVideo);
+    writeFile(videosData);
+
+    return res.status(201).json(newGame);
+});
 
 module.exports = videoRouter;
