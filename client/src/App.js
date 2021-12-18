@@ -8,7 +8,6 @@ import VideoUploadPage from './pages/VideoUploadPage/VideoUploadPage';
 // env variable = REACT_APP_API_URL
 console.log('API_URL', process.env.REACT_APP_API_URL);
 
-
 class App extends Component {
 
   render() {
