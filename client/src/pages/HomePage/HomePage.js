@@ -13,7 +13,7 @@ class HomePage extends Component {
         videoList: [],
         selectedVideo: null,
     }
-    // component did mount
+    // component was created, insert into DOM, and rendered first time
     componentDidMount() {
         const currentVideo = this.props.match.params.videoId;
 
@@ -34,7 +34,7 @@ class HomePage extends Component {
     }
 
 
-    // component did update
+    // update state for selectedVideo and videoList when user select new video from videoList
     componentDidUpdate(prevProps) {
         const currentVideo = this.props.match.params.videoId;
         const prevVideo = prevProps.match.params.videoId;
@@ -49,7 +49,7 @@ class HomePage extends Component {
         }
     }
 
-    // fetch function
+    // fetch function to update state
     fetchVideoDetails = (videoId) => {
         axios
             .get(`${API_URL}/videos/${videoId}`)
