@@ -11,10 +11,11 @@
     "timestamp": 1626032763000,
     "comments": [
       {
-        "name": "Micheal Lyons",
-        "comment": "They BLEW the ROOF off at their last event, once everyone started figuring out they were going. This is still simply the greatest opening of an event I have EVER witnessed.",
+        "name": "Veranika Karpava",
+        "comment": "Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!",
+        "id": "7342a0d3-5f74-40ab-86e1-0cea56d6bb22",
         "likes": 0,
-        "timestamp": 1628522461000
+        "timestamp": 1643878778775
       },
       {
         "name": "Gary Wong",
@@ -106,6 +107,13 @@
     "video": "https://project-2-api.herokuapp.com/stream",
     "timestamp": 1620850202000,
     "comments": [
+      {
+        "name": "Veranika Karpava",
+        "comment": "The last thing you want is to be stranded somewhere without this type of knowledge! Thank you so much for sharing your experience, this will surely come in handy.",
+        "id": "0ff520a1-7bdf-4d8f-a874-66a196315124",
+        "likes": 0,
+        "timestamp": 1643878884145
+      },
       {
         "name": "Aurora Anita",
         "comment": "This video is SO important for anybody wishing to travel overseas. We’ll be using these tips on our trips!",
@@ -203,6 +211,13 @@
     "timestamp": 1631532721000,
     "comments": [
       {
+        "name": "Veranika Karpava",
+        "comment": "I wish I could print out a video to show to my travel agent. Oh, what am I saying – they have a computer! Much appreciated advice, I can’t wait to put it into action soon.",
+        "id": "0c6bd8c7-159b-48b6-90c3-a116363e3959",
+        "likes": 0,
+        "timestamp": 1643878919271
+      },
+      {
         "name": "Fionna Miller",
         "comment": "Location location location! It blows my mind how many people don’t understand this, but you’ve summed it up so well here. The next time I travel, I’ll be on the beachfront.",
         "likes": 6,
@@ -234,6 +249,13 @@
     "video": "https://project-2-api.herokuapp.com/stream",
     "timestamp": 1631892222000,
     "comments": [
+      {
+        "name": "Veranika Karpava",
+        "comment": "Drifting along the coast in a city on the water. Such incredible destinations to see all around the world.",
+        "id": "3409d96d-dff8-4cad-aff5-8ec9f1dcdd2d",
+        "likes": 0,
+        "timestamp": 1643878967955
+      },
       {
         "name": "Jesse Cruz",
         "comment": "There’s no place quite like the open ocean. Wind in your sails. The cool mist is perfect to wake you up in the morning and lull you to sleep in the evening. What an experience.",
@@ -286,6 +308,13 @@
     "duration": "03:06",
     "timestamp": 1639835735512,
     "comments": [
+      {
+        "name": "Veranika Karpava",
+        "comment": "They BLEW the ROOF off at their last event, once everyone started figuring out they were going. This is still simply the greatest opening of an event I have EVER witnessed.",
+        "id": "b6f5c689-d616-4d04-8b4b-1ed06e82ec4c",
+        "likes": 0,
+        "timestamp": 1643878906042
+      },
       {
         "name": "Veranika Karpava",
         "comment": "They BLEW the ROOF off at their last event, once everyone started figuring out they were going. This is still simply the greatest opening of an event I have EVER witnessed.",

@@ -42,6 +42,27 @@ videoRouter.get('/:videoId', (req, res) => {
     return res.status(200).json(video);
 });
 
+// post request for adding comments
+videoRouter.post("/:videoId/comments", (req, res) => {
+    const { comment } = req.body;
+    let videoId = req.params.videoId;
+    const videosData = readFile();
+    let selectedVideo = videosData.find(video => video.id === videoId);
+
+    const newComment = {
+        name: 'Veranika Karpava',
+        comment: comment,
+        id: uuid(),
+        likes: 0,
+        timestamp: Date.now()
+    };
+
+    selectedVideo.comments.unshift(newComment)
+    writeFile(videosData)
+    return res.status(200).send(videosData);
+})
+
+
 // post request for upload form
 videoRouter.post('/', (req, res) => {
     const { title, description } = req.body;
@@ -67,10 +88,9 @@ videoRouter.post('/', (req, res) => {
         }]
     };
 
-    const videosData = readFile();;
+    const videosData = readFile();
     videosData.push(uploadVideo);
     writeFile(videosData);
-
     return res.status(201).json(uploadVideo);
 });
 
