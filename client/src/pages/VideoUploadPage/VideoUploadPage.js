@@ -10,7 +10,7 @@ const API_URL = process.env.REACT_APP_API_URL;
 
 class VideoUploadPage extends Component {
     state = {
-        videosData: []
+        videosData: [],
     }
     // submit form with redirect to homePage
     handleSubmitVideo = (e) => {
@@ -29,7 +29,11 @@ class VideoUploadPage extends Component {
                 })
                 this.props.history.push('/');
             })
-            .catch((error) => console.log(`Post request for upload video with: ${error}`))
+            .catch((error) => {
+                let messageErr = error.response.data
+                alert(messageErr);
+                console.log(`Post request for upload video with: ${error}`)
+            })
     };
 
 

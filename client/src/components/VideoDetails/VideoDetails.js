@@ -5,9 +5,9 @@ import formatTimestamp from '../../utils/formatDate';
 import viewsIcon from '../../assets/images/views.svg';
 import likesIcon from '../../assets/images/likes.svg';
 
-const VideoDetails = ({ selectedVideo }) => {
+const VideoDetails = ({ selectedVideo, fetchVideoDetails }) => {
 
-    const { title, channel, timestamp, views, likes, description, comments } = selectedVideo;
+    const { title, channel, timestamp, views, likes, description, comments, id } = selectedVideo;
 
     return (
         <div className='video-content'>
@@ -32,7 +32,7 @@ const VideoDetails = ({ selectedVideo }) => {
                 <p className='video-content__text'>{description}</p>
                 <p className='video-content__comments-counter'>{comments.length} Comments</p>
             </div>
-            <CommentBox />
+            <CommentBox id={id} fetchVideoDetails={fetchVideoDetails} />
             <ExistCommentBox comments={comments} />
         </div>
     );

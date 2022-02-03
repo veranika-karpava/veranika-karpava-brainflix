@@ -15,6 +15,7 @@ class HomePage extends Component {
     }
     // component was created, insert into DOM, and rendered first time
     componentDidMount() {
+        console.log(this.props.match.params.videoId)
         const currentVideo = this.props.match.params.videoId;
 
         axios
@@ -58,6 +59,7 @@ class HomePage extends Component {
                 this.setState({
                     selectedVideo: videoDetailResult,
                 });
+                window.scrollTo(0, 0);
             })
             .catch((error) => console.log(`Get request for videoDetails with videoId: ${error}`))
     }
@@ -74,7 +76,7 @@ class HomePage extends Component {
                 <section className="video-section">
                     <VideoMainSection selectedVideo={this.state.selectedVideo} />
                     <div className='video-section__content-main'>
-                        <VideoDetails selectedVideo={this.state.selectedVideo} />
+                        <VideoDetails selectedVideo={this.state.selectedVideo} fetchVideoDetails={this.fetchVideoDetails} />
                         <aside className='related-videos'>
                             <VideoList videoList={newVideoList} />
                         </aside>

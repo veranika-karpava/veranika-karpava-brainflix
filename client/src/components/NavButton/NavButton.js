@@ -3,12 +3,12 @@ import './NavButton.scss';
 
 const NavButton = ({ icon, title, path }) => {
     return (
-        <div className='nav-button'>
-            <Link to={path} className='nav-button__link'>
+        <Link to={path} className='nav-button__link'>
+            <div className='nav-button__container'>
                 <img className="nav-button__icon" src={icon} alt={title} />
                 {title}
-            </Link>
-        </div>
+            </div>
+        </Link>
     );
 };
 

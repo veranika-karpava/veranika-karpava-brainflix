@@ -11,6 +11,11 @@
         @include buttonStyleTablet;
         width:33%;
         }
+    @include desktop{
+            &:hover {
+            cursor: pointer;
+        }
+    }
 
     &__icon{
         float: left;

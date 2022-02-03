@@ -5,20 +5,25 @@
 
 
 .nav-button {
-    @include buttonStyle;
-    padding: 0.55rem;
-    text-align: center;
-    width: 100%;
-    @include tablet {
-        @include buttonStyleTablet;
-        width:33%;
-    }
 
     &__link {
         width: 100%;
         text-decoration: none;
         @include font-stack-button-labels;
+        @include tablet {
+            width:33%;
+        }
     }
+
+    &__container{
+        @include buttonStyle;
+        width: 100%;
+        padding: 0.55rem;
+        text-align: center;
+        @include tablet {
+        @include HeaderButtonStyleTablet;
+    }
+}
 
     &__icon{
         float:left;

@@ -156,5 +156,10 @@
             max-width:9.375rem;
             margin-top: 0rem;
         }
+        @include desktop{
+            &:hover {
+            cursor: pointer;
+            }
+        }
     }
 }
