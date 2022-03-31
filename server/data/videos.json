@@ -12,6 +12,13 @@
     "comments": [
       {
         "name": "Veranika Karpava",
+        "comment": "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Every time I see him I feel instantly happy! He’s definitely my favorite ever!",
+        "id": "25d408cc-f2ac-4d2a-97a9-fc956f649547",
+        "likes": 0,
+        "timestamp": 1643913380266
+      },
+      {
+        "name": "Veranika Karpava",
         "comment": "Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!",
         "id": "7342a0d3-5f74-40ab-86e1-0cea56d6bb22",
         "likes": 0,
@@ -147,6 +154,13 @@
     "timestamp": 1630656720000,
     "comments": [
       {
+        "name": "Veranika Karpava",
+        "comment": "Fantastic tips! I can’t believe I’ve been paying full price this whole time when it’s so easy to get a great deal. Never been more excited to book my next ticket!",
+        "id": "8ef45631-bcbb-4485-a12b-07a57a6a1cb2",
+        "likes": 0,
+        "timestamp": 1643913394277
+      },
+      {
         "name": "Felicia Hill",
         "comment": "Fantastic tips! I can’t believe I’ve been paying full price this whole time when it’s so easy to get a great deal. Never been more excited to book my next ticket!",
         "likes": 0,
@@ -178,6 +192,13 @@
     "video": "https://project-2-api.herokuapp.com/stream",
     "timestamp": 1630963412000,
     "comments": [
+      {
+        "name": "Veranika Karpava",
+        "comment": "We recently stayed at the Inn for our honeymoon. I definitely recommend the experience. We can’t wait to return for our anniversary!",
+        "id": "2f8303bb-6d7b-42f2-9a2e-e7aa0f8c095a",
+        "likes": 0,
+        "timestamp": 1645145934337
+      },
       {
         "name": "Marcus Forest",
         "comment": "We recently stayed at the Inn for our honeymoon. I definitely recommend the experience. We can’t wait to return for our anniversary!",
@@ -310,6 +331,13 @@
     "comments": [
       {
         "name": "Veranika Karpava",
+        "comment": "We recently stayed at the Inn for our honeymoon. I definitely recommend the experience. We can’t wait to return for our anniversary!",
+        "id": "320026c1-ef88-4e17-b114-620b62638ce0",
+        "likes": 0,
+        "timestamp": 1645146006349
+      },
+      {
+        "name": "Veranika Karpava",
         "comment": "They BLEW the ROOF off at their last event, once everyone started figuring out they were going. This is still simply the greatest opening of an event I have EVER witnessed.",
         "id": "b6f5c689-d616-4d04-8b4b-1ed06e82ec4c",
         "likes": 0,
@@ -320,6 +348,25 @@
         "comment": "They BLEW the ROOF off at their last event, once everyone started figuring out they were going. This is still simply the greatest opening of an event I have EVER witnessed.",
         "likes": 0,
         "timestamp": 1639835735512
+      }
+    ]
+  },
+  {
+    "id": "c5a96c13-371e-4056-9d48-003ccf4f4af2",
+    "title": "4 Basic Skills For Beginner Cyclists",
+    "channel": "John Smith",
+    "image": "/images/upload_video_preview.jpg",
+    "description": "We recently stayed at the Inn for our honeymoon. I definitely recommend the experience. We can’t wait to return for our anniversary!",
+    "views": 45,
+    "likes": 38,
+    "duration": "03:06",
+    "timestamp": 1645145981364,
+    "comments": [
+      {
+        "name": "Veranika Karpava",
+        "comment": "They BLEW the ROOF off at their last event, once everyone started figuring out they were going. This is still simply the greatest opening of an event I have EVER witnessed.",
+        "likes": 0,
+        "timestamp": 1645145981364
       }
     ]
   }
